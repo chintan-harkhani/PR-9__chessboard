@@ -1,0 +1,65 @@
+ <style>
+    body{
+       background-image: url(../chessbord/4de6261b970deb804e557b9bb1dd44ad.jpg); 
+    }
+    .data1{
+        border: 50px groove #9a674d;
+        margin: 40px auto;
+    }
+    .black{
+        height: 70px;
+        width: 70px;
+        background-image: url(download.jpg);
+        padding: 0 !important;
+    }
+    .white{
+        height: 70px;
+        width: 70px;
+        background-image: url(download\ \(1\).jpg);
+        padding: 0 !important;
+       
+    }
+ </style>
+<table id="chesh" class="data1">
+</table>
+<script type="text/javascript">
+       let data = document.getElementById('chesh');
+       for( let i=1; i<=8;i++){
+           let tr = document.createElement('tr');
+
+           if(i%2==1){
+            for(let j =1 ; j<=8; j++){
+
+                if(j%2==1){
+                    let td = document.createElement('td');
+                       tr.appendChild(td);
+                       td.setAttribute('class','white')
+                }
+                else{
+                    let td = document.createElement('td');
+                       tr.appendChild(td);
+                       td.setAttribute('class','black')
+                }
+
+                       
+               }
+           }
+           else{
+            for(let j =1 ; j<=8; j++){
+                if(j%2==1){
+                    let td = document.createElement('td');
+                       tr.appendChild(td);
+                       td.setAttribute('class','black')
+                }
+                else{
+                    let td = document.createElement('td');
+                       tr.appendChild(td);
+                       td.setAttribute('class','white')
+                }
+
+               }
+           }
+               
+           data.appendChild(tr);
+       }
+</script>
